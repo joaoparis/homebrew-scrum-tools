@@ -3,8 +3,8 @@ class StoryPointsAnalyzer < Formula
 
   desc "BuddyBuilders story-point accuracy report — publishes to Confluence"
   homepage "https://github.com/joaoparis/story-points-analyzer"
-  url "https://github.com/joaoparis/story-points-analyzer/archive/refs/tags/v1.1.4.tar.gz"
-  sha256 "4977f9f83bfc3000c8e229e58a9819143d626af5c6c194e2d95940915ecb4afe"
+  url "https://github.com/joaoparis/story-points-analyzer/archive/refs/tags/v1.1.5.tar.gz"
+  sha256 "1c44cd5c286c93f266ccbc9a8b3d2090c088c9502e5dc079d4c580a8e12a1e6f"
   license "MIT"
 
   depends_on "python@3.12"
@@ -44,7 +44,7 @@ class StoryPointsAnalyzer < Formula
   end
 
   test do
-    assert_match "story-points-analyzer 1.1.4", shell_output("#{bin}/story-points-analyzer --version")
+    assert_match "story-points-analyzer 1.1.5", shell_output("#{bin}/story-points-analyzer --version")
     assert_match "Confluence", shell_output("#{bin}/story-points-analyzer --help")
   end
 end
